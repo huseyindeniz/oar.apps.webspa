@@ -45,12 +45,12 @@ const App: React.FC = (): JSX.Element => {
   // CONTENT //
   let content = (
     <Switch>
-      <Route exact path='/' component={HomePage} />} />
-      <Route exact path='/search' component={SearchPage} />} />
-      <Route exact path='/browse' component={BrowsePage} />} />
-      <Route exact path='/about' component={AboutPage} />} />      
-      <Route exact path='/policy' component={PolicyPage} />} />
-      <Route exact path='/contact' component={ContactPage} />} />
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/search' component={SearchPage} />
+      <Route exact path='/browse' component={BrowsePage} />
+      <Route exact path='/about' component={AboutPage} />      
+      <Route exact path='/policy' component={PolicyPage} />
+      <Route exact path='/contact' component={ContactPage} />
       <Route path='/404' component={NotFoundPage} />
       <Redirect to='/404' />
     </Switch>
