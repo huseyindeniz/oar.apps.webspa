@@ -21,7 +21,7 @@ FROM nginx:1.13.12-alpine
 
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
-COPY --from=build /usr/src/app/nginx.config /etc/nginx/conf.d
+COPY --from=build /usr/src/app/nginx.config /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
