@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { MdMenu } from 'react-icons/md';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -37,7 +37,7 @@ const Header: React.FC = (): JSX.Element => {
         <AppBar position="sticky" className={classes.root}>
             <Toolbar>
                 <IconButton onClick={() => toggleDrawer(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
+                    <MdMenu size={24} />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>OpenAccess on Containers</Typography>
             </Toolbar>
