@@ -38,15 +38,13 @@ const App: React.FC = (): JSX.Element => {
  
   // STATES //
   const [error, setError] = useState<boolean>(false);
-  const [catalogList, setCatalogList] = useState<Catalog>();
 
   // OTHER INIT VARIABLES //
   const classes = useStyles();
 
   // HOOKS
   useEffect(() => {
-    console.log(process.env.REACT_APP_TEST_VAR);
-    //setCatalogList(dummyCatalog);
+
   }, []);
 
   // CONTENT //
@@ -54,7 +52,7 @@ const App: React.FC = (): JSX.Element => {
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/search' component={SearchPage} />
-      <Route exact path='/browse' render={(props) => <BrowsePage data={null} />} />
+      <Route exact path='/browse' render={(props) => <BrowsePage/>} />
       <Route exact path='/about' component={AboutPage} />      
       <Route exact path='/policy' component={PolicyPage} />
       <Route exact path='/contact' component={ContactPage} />

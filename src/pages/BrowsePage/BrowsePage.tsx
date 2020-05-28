@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-import { Catalog, CatalogList } from '../../models/Catalog/Catalog';
+import { Catalog } from '../../models/Catalog/Catalog';
 
-const BrowsePage: React.FC<CatalogList> = (props): JSX.Element => {
+const BrowsePage: React.FC = (props): JSX.Element => {
 
     const [list, setList] = useState<Catalog[] | null>();
 
     useEffect(() => {
-        console.log(props.data);
-        setList(props.data);
-    }, [props.data]);
+        console.log(props);
+        //
+    }, []);
 
     return (
         <p>Browse Page Content</p>
