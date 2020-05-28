@@ -4,8 +4,8 @@ This is the submodule of openAccessOnContainers repository located at https://gi
 ## WebSPA App - Specs
 - React
 - Typescript
-- Material-UI
 - Dockerized
+- Material-UI
 
 ## Workflow
 1. Switch to dev branch.
