@@ -2,7 +2,7 @@
 This is the submodule of openAccessOnContainers repository located at https://github.com/huseyindeniz/openAccessOnContainers
 
 ## WebSPA App - Specs
-- React with Hooks
+- React
 - Typescript
 - Material-UI
 - Dockerized
