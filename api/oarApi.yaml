@@ -14,7 +14,7 @@ tags:
   - name: 'user'
     description: 'Operations about User'
 servers:
-  - url: http://localhost:13002/v1.0
+  - url: /v1.0
 paths:
   /catalogs:
     get:
