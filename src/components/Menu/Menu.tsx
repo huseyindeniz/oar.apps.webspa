@@ -8,13 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import HomeIcon from '@material-ui/icons/Home';
-import SearchIcon from '@material-ui/icons/Search';
-import ViewListIcon from '@material-ui/icons/ViewList';
-import InfoIcon from '@material-ui/icons/Info';
-import PolicyIcon from '@material-ui/icons/Policy';
-import MailIcon from '@material-ui/icons/Mail';
-
+import { MdHome, MdSearch, MdLibraryBooks, MdInfo, MdLock, MdEmail } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -43,29 +37,29 @@ const Menu: React.FC<MenuProps> = ({ isOpen, onClickHandler }): JSX.Element => {
     >
       <List>
         <ListItem component={NavLink} to="/" exact button key='home' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><HomeIcon /></ListItemIcon>
+          <ListItemIcon><MdHome size={20} /></ListItemIcon>
           <ListItemText primary='Home' />
         </ListItem>    
         <ListItem component={NavLink} to="/search" exact button key='search' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><SearchIcon /></ListItemIcon>
+          <ListItemIcon><MdSearch size={20} /></ListItemIcon>
           <ListItemText primary='Search' />
         </ListItem>         
         <ListItem component={NavLink} to="/browse" exact button key='browse' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><ViewListIcon /></ListItemIcon>
+          <ListItemIcon><MdLibraryBooks size={20} /></ListItemIcon>
           <ListItemText primary='Browse' />
         </ListItem>
 
         <Divider />
         <ListItem component={NavLink} to="/about" exact button key='about' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><InfoIcon /></ListItemIcon>
+          <ListItemIcon><MdInfo size={20} /></ListItemIcon>
           <ListItemText primary='About' />
         </ListItem>   
         <ListItem component={NavLink} to="/policy" exact button key='policy' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><PolicyIcon /></ListItemIcon>
+          <ListItemIcon><MdLock size={20} /></ListItemIcon>
           <ListItemText primary='Policy' />
         </ListItem>   
         <ListItem component={NavLink} to="/contact" button key='contact' onClick={() => onClickHandler(false)}>
-          <ListItemIcon><MailIcon /></ListItemIcon>
+          <ListItemIcon><MdEmail size={20} /></ListItemIcon>
           <ListItemText primary='Contact' />
         </ListItem>
       </List>

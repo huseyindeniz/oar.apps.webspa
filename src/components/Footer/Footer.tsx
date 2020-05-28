@@ -16,8 +16,7 @@ const Footer: React.FC = (): JSX.Element => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <p>{'\u00A9'} Copyright, 2020<br />
-            Used tech stack in this web site: React(with Hooks), Typescript, Material-UI. Developed by Hüseyin Deniz KIVRAK.</p>
+            <p>{'\u00A9'} Copyright, 2020, developed by Hüseyin Deniz KIVRAK.</p>
         </div>
     );
 };

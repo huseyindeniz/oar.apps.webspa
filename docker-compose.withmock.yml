@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  oar.apps.webspa.mockapi:
+    image: oar.apps.webspa.mockapi
+    build:
+      context: .
+      dockerfile: Dockerfile.connexion
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080
+      - 9228:8080
+    tty: true
+  oar.apps.webspa:
+    image: oar.apps.webspa
+    depends_on:
+      - oar.apps.webspa.mockapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 80
+      - 9229:80
+    tty: true

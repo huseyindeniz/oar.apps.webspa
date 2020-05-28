@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ import BrowsePage from './pages/BrowsePage/BrowsePage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import PolicyPage from './pages/PolicyPage/PolicyPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-
+import { Catalog } from './models/Catalog/Catalog';
 
 // MATERIAL-UI STYLES //
 const useStyles = makeStyles({
@@ -38,16 +38,23 @@ const App: React.FC = (): JSX.Element => {
  
   // STATES //
   const [error, setError] = useState<boolean>(false);
+  const [catalogList, setCatalogList] = useState<Catalog>();
 
   // OTHER INIT VARIABLES //
   const classes = useStyles();
+
+  // HOOKS
+  useEffect(() => {
+    console.log(process.env.REACT_APP_TEST_VAR);
+    //setCatalogList(dummyCatalog);
+  }, []);
 
   // CONTENT //
   let content = (
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/search' component={SearchPage} />
-      <Route exact path='/browse' component={BrowsePage} />
+      <Route exact path='/browse' render={(props) => <BrowsePage data={null} />} />
       <Route exact path='/about' component={AboutPage} />      
       <Route exact path='/policy' component={PolicyPage} />
       <Route exact path='/contact' component={ContactPage} />
