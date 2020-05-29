@@ -14,11 +14,7 @@ The root project is located at https://github.com/huseyindeniz/openAccessOnConta
 - Decide and configure the unit testing structure for the app. The code coverage of the app should be at least 80%.
 
 ## Note
-I'm trying to establish a whole workflow for a microservices project. That's why I prepared the following workflows. But, I'm the only developer who is working on this project currently. For a while, I'll work like this:
-
-![alt text](/docs/D90nHuOXkAAGxtJ.jpg)
-
-:)
+I'm trying to establish a whole workflow for a microservices project. That's why I prepared the following workflows. But, I'm the only developer who is working on this project currently.
 
 ---
 
