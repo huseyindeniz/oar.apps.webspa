@@ -126,7 +126,14 @@ You also don't need to modify the MockAPI Server under the <b>api</b> directory.
 5. Create a pull request to the <b>qa</b> branch. Don't forget, the <b>qa</b> branch will automatically run the unit tests when a PR created, and will reject if it fails.
 6. GO TO step 1:)
 
-The PR reviews will be made by this team also. When a PR accepted, changes will go to the <b>qa</b> branch.
+The PR reviews are made by this team. When a PR accepted, changes will go to the <b>qa</b> branch.
+
+#### WebSPA App Dev Team Lead
+
+When the dev merges with the qa:
+
+1. Creates a pull reqest to the master branch if the milestone features completed.
+2. Merges the pull request on the master branch.
 
 ### WebSPA App QA TEAM
 
@@ -161,9 +168,8 @@ At this point, when a new PR merged to the qa branch, you will be notified to ru
 1. if the tests failed, reset the qa branch to the previous version. Send the test results to the Dev Team.
 2. if the tests succeeded, create a pull request to the dev branch. This PR will be automatically merged to the dev branch.
 
-### WebSPA App Dev Team Lead
+#### WebSPA App QA Team Lead
 
-When a PR sent to the master branch from the dev branch:
+When the qa merges with the feature/bug branch and the QA team completes its manual tests:
 
-1. Create a pull reqest to the master branch if the milestone features completed.
-2. Merge the pull request on the master branch.
+1. Creates a pull reqest to the dev branch.
