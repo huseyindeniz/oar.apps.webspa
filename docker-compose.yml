@@ -3,6 +3,8 @@ version: "3.4"
 services:
   oar.apps.webspa.mockapi:
     image: oar.apps.webspa.mockapi
+    env_file: 
+      - .env.local
     build:
       context: .
       dockerfile: Dockerfile.connexion
@@ -12,6 +14,8 @@ services:
     tty: true
   oar.apps.webspa:
     image: oar.apps.webspa
+    env_file: 
+      - .env.local   
     depends_on:
       - oar.apps.webspa.mockapi
     build:
