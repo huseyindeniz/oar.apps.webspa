@@ -14,6 +14,7 @@ The root project is located at https://github.com/huseyindeniz/openAccessOnConta
 - Create a basic create-react-app -> DONE
 - Create a branching strategy -> DONE
 - Create an environment management infra -> DONE 
+- Create a MockAPI server working with model definitions -> DONE
 - Create the CI/CD actions -> defined but not added yet
 - Create teams and their workflows -> DONE
 - Decide and configure the unit testing structure for the app. The code coverage of the unit tests should be at least 80%. -> 
