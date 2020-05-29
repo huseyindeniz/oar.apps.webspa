@@ -11,7 +11,7 @@ The root project is located at https://github.com/huseyindeniz/openAccessOnConta
 - Dockerized
 
 ## TODOs
-- Decide and configure the unit testing structure for the app. The code coverage of the app should be at least 80%.
+- Decide and configure the unit testing structure for the app. The code coverage of the unit tests should be at least 80%.
 
 ## Note
 I'm trying to establish a whole workflow for a microservices project. That's why I prepared the following workflows. But, I'm the only developer who is working on this project currently :)
@@ -53,22 +53,22 @@ I'm trying to establish a whole workflow for a microservices project. That's why
     - Runs the integration tests. 
     - If the integration tests fail, rejects the PR. Sends a notification to the Dev and the QA Team.
     - If the integration tests succeed, merges the requester branch with the qa. Sends notification to the QA Team.
-    - At this point, QA Team need to test the application by theirselves.
-    - If their tests fail, QA Team Lead reverts back the branch to the previous state. And sends report to the Dev Team.
-    - If their tests succeeded, QA Team Lead create a PR to the dev branch.
+    - At this point, the QA Team need to test the application by theirselves.
+    - If their tests fail, the QA Team Lead reverts back the branch to the previous state. And sends a report to the Dev Team.
+    - If their tests succeed, the QA Team Lead create a PR to the dev branch.
 2. <b>dev-pr</b>:
     - Triggers on PRs to the dev from the qa.
-    - Run the unit tests. 
-    - If the unit tests fail, rejects the PR. Sends a notification to the Dev Team.
+    - Runs the unit tests. 
+    - If the unit tests fail, rejects the PR. Sends a notification to the QA and the Dev Team.
     - If the unit tests succeed, goes on next steps.
     - Runs the integration tests. 
     - If the integration tests fail, rejects the PR. Sends a notification to the Dev and the QA Team.
-    - If the integration tests succeed, merges with the dev. Sends notification to the Dev Team Lead.
-    - At this point, the Dev Team Lead decides to send PR to master if the milestone features completed.
+    - If the integration tests succeed, merges with the qa. Sends a notification to the Dev Team Lead.
+    - At this point, the Dev Team Lead decides to send a PR to the master if the milestone features completed.
 3. <b>master-pr</b>:
     - Triggers on PRs to the master from the dev.
-    - Runs unit tests. If fails, rejects PR. If successful, go to next step
-    - Run integration tests. If fails, rejects PR. If successful, merges with dev.
+    - Runs unit tests. If fails, rejects PR. If successful, goes to next step.
+    - Runs integration tests. If fails, rejects PR. If successful, merges with dev.
 4. <b>master-push</b>:
     - Triggers on pushs in master.
     - Builds deployment packages.
