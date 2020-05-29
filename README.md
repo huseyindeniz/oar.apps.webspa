@@ -11,7 +11,12 @@ The root project is located at https://github.com/huseyindeniz/openAccessOnConta
 - Dockerized
 
 ## TODOs
-- Decide and configure the unit testing structure for the app. The code coverage of the unit tests should be at least 80%.
+- Create a basic create-react-app -> DONE
+- Create a branching strategy -> DONE
+- Create a environment management infra -> DONE 
+- Create the CI/CD actions -> defined but not added yet
+- Create teams and their workflows -> DONE
+- Decide and configure the unit testing structure for the app. The code coverage of the unit tests should be at least 80%. -> 
 
 ## Note
 I'm trying to establish a whole workflow for a microservices project. That's why I prepared the following workflows. But, I'm the only developer who is working on this project currently :)
@@ -170,6 +175,5 @@ At this point, when a new PR merged to the qa branch, you will be notified to ru
 
 #### WebSPA App QA Team Lead
 
-When the qa merges with the feature/bug branch and the QA team completes its manual tests:
-
-1. Creates a pull reqest to the dev branch.
+1. If the latest merge on the qa from feature/bug branches tests fail, reverts back the branch to the previous state. And sends a report to the Dev Team. 
+2. If the latest merge on the qa from feature/bug branches tests succeed, creates a pull reqest to the dev branch.
