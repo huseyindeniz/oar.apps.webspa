@@ -13,10 +13,11 @@ The root project is located at https://github.com/huseyindeniz/openAccessOnConta
 ## TODOs
 - Create a basic create-react-app -> DONE
 - Create a branching strategy -> DONE
-- Create a environment management infra -> DONE 
+- Create an environment management infra -> DONE 
 - Create the CI/CD actions -> defined but not added yet
 - Create teams and their workflows -> DONE
 - Decide and configure the unit testing structure for the app. The code coverage of the unit tests should be at least 80%. -> 
+- Find integration test tools.
 
 ## Note
 I'm trying to establish a whole workflow for a microservices project. That's why I prepared the following workflows. But, I'm the only developer who is working on this project currently :)
