@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  oar.apps.webspa.mockapi:
+    image: oar.apps.webspa.mockapi
+    env_file: 
+      - .env.local
+    build:
+      context: .
+      dockerfile: Dockerfile.connexion
+    ports:
+      - 8080
+      - ${REACT_APP_API_PORT}:8080
+    tty: true
