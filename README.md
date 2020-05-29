@@ -1,12 +1,20 @@
 # openAccessOnContainers - Apps - WebSPA
 This is the submodule of openAccessOnContainers repository located at https://github.com/huseyindeniz/openAccessOnContainers
 
+<<<<<<< HEAD
 ## Technical Requirements
 - Production code should be served on Dockerized Nginx.
 - Should be able to be live tested alone. -> probably with Swagger + Imposter
 - React + Typescript + Material-UI
 - TDD -> probably with jest, enzyme etc.
 - Environment management strategy: ??? still looking for.
+=======
+## WebSPA App - Specs
+- React
+- Typescript
+- Dockerized
+- Material-UI
+>>>>>>> dev
 
 ## How to Run the Application
 

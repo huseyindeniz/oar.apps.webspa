@@ -6,6 +6,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { MdMenu } from 'react-icons/md';
+import { Button } from '@material-ui/core';
+import { MdOpenInNew } from 'react-icons/md';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -40,6 +42,14 @@ const Header: React.FC = (): JSX.Element => {
                     <MdMenu size={24} />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>OpenAccess on Containers</Typography>
+                <Typography variant="body2">
+                ENV: {process.env.REACT_APP_ENV_VAR}<br />
+                API: <Button 
+                        endIcon={<MdOpenInNew />}
+                        target='_blank' 
+                        href={'http://' + process.env.REACT_APP_API_HOST + ':' +process.env.REACT_APP_API_PORT + '/v1.0/ui' }>
+                            {'http://' + process.env.REACT_APP_API_HOST + ':' +process.env.REACT_APP_API_PORT + '/v1.0/ui' }</Button>
+                </Typography>
             </Toolbar>
             <Menu isOpen={isMenuOpen} onClickHandler={toggleDrawer} />
         </AppBar>
