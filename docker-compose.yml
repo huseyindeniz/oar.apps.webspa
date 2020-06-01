@@ -1,33 +1,25 @@
-version: "3.4"
+version: '3.4'
 
 services:
-  oar.apps.webspa.mockapi:
-    image: oar.apps.webspa.mockapi
-    env_file: 
-      - .env.local
-    build:
-      context: .
-      dockerfile: Dockerfile.connexion
-    ports:
-      - 8080
-      - ${REACT_APP_API_PORT}:8080
-    tty: true
   oar.apps.webspa:
     image: oar.apps.webspa
-    env_file: 
-      - .env.local   
-    depends_on:
-      - oar.apps.webspa.mockapi
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
       args:
-        REACT_APP_ENV_VAR: ${REACT_APP_ENV_VAR}
-        REACT_APP_HOST: ${REACT_APP_HOST}
-        REACT_APP_PORT: ${REACT_APP_PORT}        
-        REACT_APP_API_HOST: ${REACT_APP_API_HOST}
-        REACT_APP_API_PORT: ${REACT_APP_API_PORT}
+        REACT_APP_ENV_VAR: ${APP_ENV}
+        REACT_APP_HOST: ${APPS_WEBSPA_HOST}
+        REACT_APP_PORT: ${APPS_WEBSPA_PORT}        
+        REACT_APP_API_HOST: ${APIGATEWAYS_WEB_HOST}
+        REACT_APP_API_PORT: ${APIGATEWAYS_WEB_PORT}      
+    environment:
+      NODE_ENV: ${APP_ENV}
+      REACT_APP_ENV_VAR: ${APP_ENV}
+      REACT_APP_HOST: ${APPS_WEBSPA_HOST}
+      REACT_APP_PORT: ${APPS_WEBSPA_PORT}        
+      REACT_APP_API_HOST: ${APIGATEWAYS_WEB_HOST}
+      REACT_APP_API_PORT: ${APIGATEWAYS_WEB_PORT}       
     ports:
       - 80
-      - ${REACT_APP_PORT}:80
+      - ${APPS_WEBSPA_PORT}:80
     tty: true
